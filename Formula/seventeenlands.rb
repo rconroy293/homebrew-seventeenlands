@@ -49,6 +49,6 @@ class Seventeenlands < Formula
 
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources(:using => "python@3.6")
   end
 end
