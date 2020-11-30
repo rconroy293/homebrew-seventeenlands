@@ -49,6 +49,11 @@ class Seventeenlands < Formula
     sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
+  def install
+    virtualenv_install_with_resources(:using => "python@3.7")
+    bin.install_symlink prefix/"libexec/bin/seventeenlands"
+  end
+
   plist_options manual: "seventeenlands"
 
   def plist
@@ -74,7 +79,14 @@ class Seventeenlands < Formula
     EOS
   end
 
-  def install
-    virtualenv_install_with_resources(:using => "python@3.7")
+  def startup_script; <<-EOS.undent
+    #!/bin/sh
+    #{prefix}/libexec/bin/seventeenlands
+    EOS
   end
+
+  test do
+    system "#{bin}/seventeenlands", "--help"
+  end
+
 end
