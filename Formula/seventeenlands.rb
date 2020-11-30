@@ -1,6 +1,7 @@
 class Seventeenlands < Formula
   include Language::Python::Virtualenv
 
+  full_name "rconroy293/seventeenlands/seventeenlands"
   desc "Utility to upload MTG Arena data to 17Lands.com"
   homepage "https://www.17lands.com/"
   url "https://files.pythonhosted.org/packages/8f/94/32d06ac5c5e931d257748274c3aa453fe7774185892d1640d13f70c4e87c/seventeenlands-0.0.4.tar.gz"
