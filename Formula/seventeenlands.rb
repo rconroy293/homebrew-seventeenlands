@@ -1,12 +1,13 @@
 class Seventeenlands < Formula
   include Language::Python::Virtualenv
 
-  full_name "rconroy293/seventeenlands/seventeenlands"
   desc "Utility to upload MTG Arena data to 17Lands.com"
   homepage "https://www.17lands.com/"
   url "https://files.pythonhosted.org/packages/8f/94/32d06ac5c5e931d257748274c3aa453fe7774185892d1640d13f70c4e87c/seventeenlands-0.0.4.tar.gz"
   sha256 "2b18728e6165b83981ed445cfc37a3f9bba20dfeea37391c0d1d3e9e24a76e12"
   license "GPL-3.0"
+
+  depends_on "python@3.7"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
@@ -50,6 +51,6 @@ class Seventeenlands < Formula
 
 
   def install
-    virtualenv_install_with_resources(:using => "python@3.6")
+    virtualenv_install_with_resources(:using => "python@3.7")
   end
 end
