@@ -1,4 +1,4 @@
-class Foo < Formula
+class Seventeenlands < Formula
   include Language::Python::Virtualenv
 
   desc "Utility to upload MTG Arena data to 17Lands.com"
