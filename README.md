@@ -1,4 +1,4 @@
-# Rconroy293 Seventeenlands
+# 17Lands Brew Tap
 
 ## How do I install these formulae?
 `brew install rconroy293/seventeenlands/<formula>`
