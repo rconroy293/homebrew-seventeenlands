@@ -3,8 +3,8 @@ class Seventeenlands < Formula
 
   desc "Utility to upload MTG Arena data to 17Lands.com"
   homepage "https://www.17lands.com/"
-  url "https://files.pythonhosted.org/packages/8f/94/32d06ac5c5e931d257748274c3aa453fe7774185892d1640d13f70c4e87c/seventeenlands-0.0.4.tar.gz"
-  sha256 "2b18728e6165b83981ed445cfc37a3f9bba20dfeea37391c0d1d3e9e24a76e12"
+  url "https://files.pythonhosted.org/packages/89/35/2ba444fbb6cf3a13ddae4875c03a13d1494858b00a3abe937a364fcebdd5/seventeenlands-0.0.5.tar.gz"
+  sha256 "d9e9aeefa8dc65fd72d588dbc99f6f10e426a974b4cf26f8d777a918ded8888d"
   license "GPL-3.0"
 
   depends_on "python@3.7"
@@ -35,8 +35,8 @@ class Seventeenlands < Formula
   end
 
   resource "seventeenlands" do
-    url "https://files.pythonhosted.org/packages/8f/94/32d06ac5c5e931d257748274c3aa453fe7774185892d1640d13f70c4e87c/seventeenlands-0.0.4.tar.gz"
-    sha256 "2b18728e6165b83981ed445cfc37a3f9bba20dfeea37391c0d1d3e9e24a76e12"
+    url "https://files.pythonhosted.org/packages/89/35/2ba444fbb6cf3a13ddae4875c03a13d1494858b00a3abe937a364fcebdd5/seventeenlands-0.0.5.tar.gz"
+    sha256 "d9e9aeefa8dc65fd72d588dbc99f6f10e426a974b4cf26f8d777a918ded8888d"
   end
 
   resource "six" do
@@ -49,6 +49,30 @@ class Seventeenlands < Formula
     sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
+  plist_options manual: "seventeenlands"
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>KeepAlive</key>
+        <true/>
+        <key>Label</key>
+        <string>17Lands</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>/bin/sh</string>
+          <string>-c</string>
+          <string>#{prefix}/libexec/bin/seventeenlands</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+      </dict>
+      </plist>
+    EOS
+  end
 
   def install
     virtualenv_install_with_resources(:using => "python@3.7")
