@@ -36,7 +36,7 @@ class Seventeenlands < Formula
 
   resource "seventeenlands" do
     url "https://files.pythonhosted.org/packages/6a/e9/56e70be5fecc05958ce837cb31a2b42d80f06e0ad828be30306ff98c356b/seventeenlands-0.1.19.tar.gz"
-    sha256 "f4da6596940b9d8e13f2650b82b0ea0a6710555670ff8f04e86460e3a4638961"
+    sha256 "da1b7aeedb29a5e0e7bb8b74bdf796d315623720545f9eae4266e6d18b1e6764"
   end
 
   resource "six" do
@@ -46,7 +46,7 @@ class Seventeenlands < Formula
 
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
-    sha256 "da1b7aeedb29a5e0e7bb8b74bdf796d315623720545f9eae4266e6d18b1e6764"
+    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
   def install
