@@ -49,6 +49,11 @@ class Seventeenlands < Formula
     sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
+  resource "wxPython" do
+    url "https://files.pythonhosted.org/packages/b0/4d/80d65c37ee60a479d338d27a2895fb15bbba27a3e6bb5b6d72bb28246e99/wxPython-4.1.1.tar.gz"
+    sha256 "00e5e3180ac7f2852f342ad341d57c44e7e4326de0b550b9a5c4a8361b6c3528"
+  end
+
   def install
     virtualenv_install_with_resources(:using => "python@3.7")
     bin.install_symlink prefix/"libexec/bin/seventeenlands"
