@@ -8,6 +8,7 @@ class Seventeenlands < Formula
   license "GPL-3.0"
 
   depends_on "python@3.7"
+  depends_on "wxPython"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
@@ -47,11 +48,6 @@ class Seventeenlands < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
     sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
-  end
-
-  resource "wxPython" do
-    url "https://files.pythonhosted.org/packages/b0/4d/80d65c37ee60a479d338d27a2895fb15bbba27a3e6bb5b6d72bb28246e99/wxPython-4.1.1.tar.gz"
-    sha256 "00e5e3180ac7f2852f342ad341d57c44e7e4326de0b550b9a5c4a8361b6c3528"
   end
 
   def install
