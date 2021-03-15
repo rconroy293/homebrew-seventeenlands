@@ -50,8 +50,8 @@ class Seventeenlands < Formula
   end
 
   resource "wxPython" do
-    url "https://files.pythonhosted.org/packages/b0/4d/80d65c37ee60a479d338d27a2895fb15bbba27a3e6bb5b6d72bb28246e99/wxPython-4.1.1.tar.gz"
-    sha256 "00e5e3180ac7f2852f342ad341d57c44e7e4326de0b550b9a5c4a8361b6c3528"
+    url "https://files.pythonhosted.org/packages/b4/7a/72d20d8cd043125120dd9c14ba51fdb5df5b2970c569b0ee19e65c1c1568/wxPython-4.1.1-cp37-cp37m-macosx_10_9_x86_64.whl"
+    sha256 "07aed697e86904eb6bd63956a3eb792eb54139ddec3ee95f129340973bdcdc54"
   end
 
   def install
