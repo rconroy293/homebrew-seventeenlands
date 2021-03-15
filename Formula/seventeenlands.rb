@@ -7,7 +7,7 @@ class Seventeenlands < Formula
   sha256 "268fc0d92209cfb17005291df6e5cf20cd88f5449eebd0de1da2a1bdc9037dd9"
   license "GPL-3.0"
 
-  depends_on "python@3.7"
+  depends_on "python@3.9"
   depends_on "wxpython"
 
   resource "certifi" do
@@ -51,7 +51,7 @@ class Seventeenlands < Formula
   end
 
   def install
-    virtualenv_install_with_resources(:using => "python@3.7")
+    virtualenv_install_with_resources(:using => "python@3.9")
     bin.install_symlink prefix/"libexec/bin/seventeenlands"
   end
 
