@@ -7,7 +7,7 @@ class Seventeenlands < Formula
   sha256 "3555c2e001586402f0ec05f6226192e9b03f7576e8f4f11451eaec5fab1b7b19"
   license "GPL-3.0"
 
-  depends_on "python@3.7"
+  depends_on "python@3.9"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
@@ -50,7 +50,11 @@ class Seventeenlands < Formula
   end
 
   def install
-    virtualenv_install_with_resources(:using => "python@3.7")
+    venv = virtualenv_create(libexec, "python3.9")
+    venv.pip_install resources
+    system libexec/"bin/pip", "install", "wxPython"
+    venv.pip_install_and_link buildpath
+
     bin.install_symlink prefix/"libexec/bin/seventeenlands"
   end
 
