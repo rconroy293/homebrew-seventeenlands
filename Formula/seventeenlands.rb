@@ -3,8 +3,8 @@ class Seventeenlands < Formula
 
   desc "Utility to upload MTG Arena data to 17Lands.com"
   homepage "https://www.17lands.com/"
-  url "https://files.pythonhosted.org/packages/39/8f/96ae68308b1463fbecd0a66cd431ff550a418fed6beb59a454a39109ec2e/seventeenlands-0.1.28.tar.gz"
-  sha256 "e850995f33050460c97767ff1024b285d1c7c09632ee23cd93a8676782818e2d"
+  url "https://files.pythonhosted.org/packages/d5/ce/0caf1df9ced89bde243a74e3020afea9c0df3636ff6f74c5cb3c3e3c62a2/seventeenlands-0.1.29.tar.gz"
+  sha256 "d0beec123564eaf3c723d1f80d42953c97be498ea47b0ab1ced7a947869934b1"
   license "GPL-3.0"
 
   depends_on "python@3.9"
@@ -35,8 +35,8 @@ class Seventeenlands < Formula
   end
 
   resource "seventeenlands" do
-    url "https://files.pythonhosted.org/packages/39/8f/96ae68308b1463fbecd0a66cd431ff550a418fed6beb59a454a39109ec2e/seventeenlands-0.1.28.tar.gz"
-    sha256 "e850995f33050460c97767ff1024b285d1c7c09632ee23cd93a8676782818e2d"
+    url "https://files.pythonhosted.org/packages/d5/ce/0caf1df9ced89bde243a74e3020afea9c0df3636ff6f74c5cb3c3e3c62a2/seventeenlands-0.1.29.tar.gz"
+    sha256 "d0beec123564eaf3c723d1f80d42953c97be498ea47b0ab1ced7a947869934b1"
   end
 
   resource "six" do
