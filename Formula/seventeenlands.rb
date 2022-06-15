@@ -65,7 +65,7 @@ class Seventeenlands < Formula
         <key>KeepAlive</key>
         <true/>
         <key>Label</key>
-        <string>17Lands</string>
+        <string>homebrew.mxcl.seventeenlands</string>
         <key>ProgramArguments</key>
         <array>
           <string>/bin/sh</string>
