@@ -7,7 +7,7 @@ class Seventeenlands < Formula
   sha256 "7de67b37b947c4cfed9f785c757e385cdd5813b8adc6e6797a709f4939025f5e"
   license "GPL-3.0"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
@@ -34,7 +34,7 @@ class Seventeenlands < Formula
     sha256 "7f1a0b932f4a60a1a65caa4263921bb7d9ee911957e0ae4a23a6dd08185ad5f8"
   end
 
-  resource "seventeenlands" do
+  resource "17lands" do
     url "https://files.pythonhosted.org/packages/54/9b/37801ca9151749136077b4c87c67fbf982681b8158c8ab3abda3c3ab0530/seventeenlands-0.1.38.tar.gz"
     sha256 "7de67b37b947c4cfed9f785c757e385cdd5813b8adc6e6797a709f4939025f5e"
   end
@@ -50,43 +50,16 @@ class Seventeenlands < Formula
   end
 
   def install
-    virtualenv_install_with_resources(:using => "python@3.9")
+    virtualenv_install_with_resources
     bin.install_symlink prefix/"libexec/bin/seventeenlands"
   end
 
-  plist_options manual: "seventeenlands"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>KeepAlive</key>
-        <true/>
-        <key>Label</key>
-        <string>homebrew.mxcl.seventeenlands</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>/bin/sh</string>
-          <string>-c</string>
-          <string>#{prefix}/libexec/bin/seventeenlands</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-      </dict>
-      </plist>
-    EOS
-  end
-
-  def startup_script; <<-EOS.undent
-    #!/bin/sh
-    #{prefix}/libexec/bin/seventeenlands
-    EOS
+  service do
+    run [HOMEBREW_PREFIX/"bin/seventeenlands"]
+    keep_alive true
   end
 
   test do
     system "#{bin}/seventeenlands", "--help"
   end
-
 end
