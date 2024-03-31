@@ -34,7 +34,7 @@ class Seventeenlands < Formula
     sha256 "7f1a0b932f4a60a1a65caa4263921bb7d9ee911957e0ae4a23a6dd08185ad5f8"
   end
 
-  resource "seventeenlands" do
+  resource "17lands" do
     url "https://files.pythonhosted.org/packages/c7/2d/7f69b50bee6d4fa717c373c9de17aeb0e5d631daa997bfa77c34e3626f12/seventeenlands-0.1.42.tar.gz"
     sha256 "3ff8a6578befc9deb0823a97ce07c8014445b4584bc17d5e4bc7a23e5efda199"
   end
